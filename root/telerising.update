@@ -5,7 +5,7 @@ echo "Updating Telerising-API"
 PWD=$(pwd)
 
 rm -rf /telerising/telerising
-git clone https://github.com/DeBaschdi/telerising.git /telerising/telerising
+git clone https://github.com/comzine/telerising.git /telerising/telerising
 
 cd /telerising/telerising
 git checkout master
@@ -39,7 +39,7 @@ if [[ -z "${ADDRESS}" ]]; then
       "loglevel": $FFMPEG_LOGLEVEL,
       "ondemand": $ONDEMAND,
       "code" : $SERVER_PIN,
-      "ssldomain" : $SSL_DOMAIN
+      "altdomain" : $ALT_DOMAIN
     }
   ' < /etc/userfile.json > /telerising/userfile.json
 fi
@@ -68,7 +68,7 @@ if [[ "${ADDRESS}" ]]; then
       "loglevel": $FFMPEG_LOGLEVEL,
       "ondemand": $ONDEMAND,
       "code" : $SERVER_PIN,
-      "ssldomain" : $SSL_DOMAIN
+      "altdomain" : $ALT_DOMAIN
     }
   ' < /etc/userfile.json > /telerising/userfile.json
 fi
